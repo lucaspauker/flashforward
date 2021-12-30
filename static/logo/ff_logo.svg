@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000"
+   height="1000"
+   viewBox="0 0 264.58333 264.58333"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   sodipodi:docname="ff_logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="px"
+     showgrid="false"
+     width="1000px"
+     units="px"
+     inkscape:zoom="0.51173798"
+     inkscape:cx="421.11395"
+     inkscape:cy="714.2327"
+     inkscape:window-width="1164"
+     inkscape:window-height="891"
+     inkscape:window-x="613"
+     inkscape:window-y="123"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#f5f5f5;fill-opacity:1;stroke-width:0.404037"
+       id="rect10645"
+       width="264.58334"
+       height="264.58334"
+       x="0.051972479"
+       y="0.0051661911" />
+    <circle
+       style="opacity:1;fill:#234155;fill-opacity:1;stroke-width:0.280002"
+       id="path8549"
+       cx="132.34366"
+       cy="132.29684"
+       r="105.83333" />
+    <path
+       id="rect8188"
+       style="fill:#f0f078;fill-opacity:1;stroke-width:0.264583"
+       d="M 256.24593,35.770022 51.022001,141.60336 H 107.83196 L 8.4413561,247.43669 213.66529,141.60336 h -56.80997 z" />
+    <path
+       id="path11673"
+       style="fill:#5d7932;fill-opacity:1;stroke-width:0.264583"
+       d="M 256.24593,20.259155 51.022001,126.09249 H 107.83196 L 8.4413563,231.92582 213.66529,126.09249 h -56.80997 z" />
+  </g>
+</svg>

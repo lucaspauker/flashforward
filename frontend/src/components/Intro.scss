@@ -1,0 +1,38 @@
+@import './variables.scss';
+
+.intro {
+  text-align: center;
+  margin: 50px 0px;
+
+  h1 {
+    font-size: $large-font;
+    padding: 30px;
+    margin: 0px;
+  }
+
+  h2 {
+    color: $secondary-text-color;
+    padding: 0px 50px;
+    font-size: $medium-font;
+    font-weight: normal;
+    padding-bottom: 30px;
+    margin: 0px auto;
+  }
+
+  input {
+    color: $primary-text-color;
+    border: none;
+    background-color: $primary-color;
+    padding: 20px 30px;
+    margin: 0px;
+    margin-bottom: 30px;
+    font-size: $small-font;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform $transition-time;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

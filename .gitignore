@@ -1,0 +1,6 @@
+*pyc
+*swp
+
+frontend/static
+
+frontend/node_modules

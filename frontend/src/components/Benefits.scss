@@ -1,0 +1,45 @@
+@import './variables.scss';
+
+.benefits {
+  text-align: center;
+
+  h3 {
+    font-size: $medium-font;
+  }
+
+  p {
+    color: $secondary-text-color;
+    font-size: $small-font;
+  }
+
+  svg {
+    color: black;
+    $svg-size: 30px;
+    width: $svg-size;
+    height: $svg-size;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px auto;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      width: 20%;
+      max-width: 300px;
+      padding: 20px;
+      padding-bottom: 0px;
+      margin: 0px 20px;
+
+      @media (max-width: 800px) {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 0px;
+        margin: 0px auto;
+      }
+    }
+  }
+}
+

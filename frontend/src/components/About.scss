@@ -1,0 +1,45 @@
+@import './variables.scss';
+
+.about {
+  text-align: center;
+  margin-top: 50px;
+
+  h3 {
+    font-size: $medium-large-font;
+    margin: 10px 0px;
+  }
+
+  h4 {
+    color: $secondary-text-color;
+    font-size: $small-font;
+    font-weight: normal;
+  }
+
+  .image-section {
+    display: inline-block;
+    margin: 50px 0px 20px 0px;
+
+    .container {
+      display: inline-block;
+      margin: 0px 50px;
+
+      img {
+        width: 200px;
+        height: 200px;
+        margin: 0px;
+        border-radius: 50%;
+        @media (max-width: 600px) {
+          width: 150px;
+          height: 150px;
+          padding-bottom: 20px;
+        }
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+        vertical-align: top;
+      }
+    }
+  }
+}

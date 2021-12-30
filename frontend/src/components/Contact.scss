@@ -1,0 +1,81 @@
+@import './variables.scss';
+
+.contact {
+  text-align: center;
+  color: $background-color;
+  color: $primary-text-color;
+  font-size: $small-font;
+  background-color: $primary-color;
+  padding: 30px 0px;
+  border-radius: $border-radius;
+  margin-top: 50px;
+
+  h3 {
+    font-size: $medium-large-font;
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+
+  .form-group {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin: 0px auto;
+    padding: 10px 0px;
+  }
+
+
+  label{
+    float: left;
+    width: 25%;
+    text-align: right;
+    margin-right: 30px;
+    margin-top: 5px;
+    font-weight: bold;
+
+    @media (max-width: 600px) {
+      text-align: center;
+      float: none;
+      width: 100%;
+      margin: 0px auto;
+    }
+  }
+
+  input, textarea {
+    float: left;
+    width: 50%;
+    font-size: 20px;
+    border-radius: $border-radius;
+    padding: 5px;
+    margin: 0px;
+    outline: none;
+    border: 2px solid $dark-secondary-color;
+
+    &:hover, &:focus {
+      border: 3px solid $dark-secondary-color;
+      margin: -1px;
+    }
+
+    @media (max-width: 600px) {
+      float: none;
+      width: 90%;
+    }
+  }
+
+  input {
+    height: 30px;
+  }
+
+  textarea {
+    height: 150px;
+    resize: none;
+  }
+
+  button {
+    color: $primary-text-color;
+    background-color: $background-color;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+}
+

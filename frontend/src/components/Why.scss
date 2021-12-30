@@ -1,0 +1,91 @@
+@import './variables.scss';
+
+.why {
+  margin-top: 50px;
+
+  h2 {
+    font-size: $medium-large-font;
+    max-width: 500px;
+    margin: 0px auto;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: $medium-font;
+    max-width: 500px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  p {
+    color: $secondary-text-color;
+    font-size: $small-font;
+  }
+
+  .why-list {
+    margin: 0px;
+    padding: 0px;
+
+    ol {
+      margin: 0px;
+      padding: 0px;
+      vertical-align: top;
+      width: 100%;
+
+      li {
+        display: block;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .why-body {
+      width: 100%;
+      text-align: left;
+
+      ul {
+        width: 100%;
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px auto;
+
+        li {
+          vertical-align: middle;
+          display: inline-block;
+          padding: 0px;
+          margin: 0px;
+
+        }
+
+        #list {
+          width: 75%;
+          max-width: 800px;
+          @media (max-width: 940px) {
+            width: 100%;
+            max-width: 100%;
+            margin: 0px auto;
+          }
+        }
+
+        #img {
+          width: 25%;
+          max-width: 400px;
+          text-align: center;
+          @media (max-width: 940px) {
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+      }
+
+      img {
+        display: relative;
+        width: 180px;
+        padding: 0px;
+        margin: 0px auto;
+      }
+  }
+}
+
