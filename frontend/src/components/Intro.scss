@@ -35,8 +35,8 @@
     display: inline-block;
 
     &:hover {
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
+      -webkit-transform: scale($transform);
+      transform: scale($transform);
     }
   }
 }

@@ -35,12 +35,19 @@
       padding: 20px;
       padding-bottom: 0px;
       margin: 0px 20px;
+      transition: transform $transition-time;
+      border-radius: $border-radius;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
       @media (max-width: 800px) {
         width: 100%;
         max-width: 100%;
         padding: 20px 0px;
         margin: 0px auto;
+      }
+
+      &:hover {
+        transform: scale($transform);
       }
     }
   }
