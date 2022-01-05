@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.scss';
+import { animateScroll as scroll } from 'react-scroll'
 
 //import { Authenticator } from '@aws-amplify/ui-react';
 
@@ -10,7 +11,7 @@ export class Navbar extends React.Component {
         <ul>
           <li><b>FlashForward.ai</b></li>
           <li><a href='/'>Home</a></li>
-          <li><a href='#contact'>Contact</a></li>
+          <li><a onClick={scroll.scrollToBottom}>Contact</a></li>
           {/*<li>
             <Authenticator>
               {({ signOut, user }) => (

@@ -1,6 +1,8 @@
 import React from 'react';
 import './Intro.scss';
 
+import { animateScroll as scroll } from 'react-scroll'
+
 export class Intro extends React.Component {
   render() {
     return (
@@ -8,9 +10,9 @@ export class Intro extends React.Component {
         <h1>Scheduling patches sucks.</h1>
         <h2>Use FlashForward to coordinate when patches happen, create custom patching
             policies, and optimize patch scheduling</h2>
-        <form action="#contact">
-            <input type="submit" value="Let's talk!" />
-        </form>
+        <a onClick={scroll.scrollToBottom}>
+            Let's talk!
+        </a>
       </div>
     );
   }

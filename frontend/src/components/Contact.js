@@ -2,6 +2,8 @@ import React from 'react';
 import './Contact.scss';
 import axios from 'axios';
 
+import Collapsible from 'react-collapsible';
+
 export class Contact extends React.Component {
   render() {
     return (
@@ -70,17 +72,17 @@ class ContactForm extends React.Component {
           <h3>Contact us!</h3>
           <form id='contact-form' onSubmit={this.handleSubmit.bind(this)} method='POST'>
               <div className='form-group'>
-                  <label htmlFor='name'>Name</label>
-                  <input type='text' className='form-control' id='name' value={this.state.name} onChange={this.onNameChange.bind(this)} />
+                  <label htmlFor='name'>Name *</label>
+                  <input type='text' className='form-control' id='name' value={this.state.name} onChange={this.onNameChange.bind(this)} placeholder='John Doe' />
 
               </div>
               <div className='form-group'>
-                  <label htmlFor='email'>Email address</label>
-                  <input type='text' className='form-control' id='email' value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+                  <label htmlFor='email'>Email address *</label>
+                  <input type='text' className='form-control' id='email' value={this.state.email} onChange={this.onEmailChange.bind(this)} placeholder='example@gmail.com' />
               </div>
               <div className='form-group'>
-                  <label htmlFor='message'>Message</label>
-                  <textarea className='form-control' rows='5' id='message' value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+                  <label htmlFor='message'>Message *</label>
+                  <textarea className='form-control' rows='5' id='message' value={this.state.message} onChange={this.onMessageChange.bind(this)} placeholder='Your questions or comments' />
 
               </div>
               <button type='submit' className='btn btn-primary'>Submit</button>

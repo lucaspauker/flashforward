@@ -3,6 +3,9 @@
 .nav {
   border-bottom: 1px solid black;
   font-size: $small-font;
+  max-width: $max-width;
+  padding: 0px 20px;
+  margin: 0px auto;
 
   ul {
     list-style-type: none;

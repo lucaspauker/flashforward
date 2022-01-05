@@ -2,6 +2,9 @@
 
 .benefits {
   text-align: center;
+  max-width: $max-width;
+  padding: 0px 20px;
+  margin: $elem-spacing auto;
 
   h3 {
     font-size: $medium-font;

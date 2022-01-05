@@ -2,7 +2,9 @@
 
 .intro {
   text-align: center;
-  margin: 50px 0px;
+  max-width: $max-width;
+  padding: 0px 20px;
+  margin: $elem-spacing auto;
 
   h1 {
     font-size: $large-font;
@@ -19,7 +21,7 @@
     margin: 0px auto;
   }
 
-  input {
+  a {
     color: $primary-text-color;
     border: none;
     background-color: $primary-color;
@@ -30,8 +32,10 @@
     border-radius: 8px;
     font-weight: bold;
     transition: transform $transition-time;
+    display: inline-block;
 
     &:hover {
+      -webkit-transform: scale(1.1);
       transform: scale(1.1);
     }
   }

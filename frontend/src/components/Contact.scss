@@ -7,58 +7,46 @@
   font-size: $small-font;
   background-color: $primary-color;
   padding: 30px 0px;
-  border-radius: $border-radius;
-  margin-top: 50px;
+  margin: $elem-spacing auto;
 
   h3 {
     font-size: $medium-large-font;
     margin: 0px;
     margin-bottom: 10px;
+    font-weight: bold;
   }
 
   .form-group {
     text-align: center;
-    display: inline-block;
-    width: 100%;
+    display: block;
+    width: 60%;
     margin: 0px auto;
     padding: 10px 0px;
   }
 
-
   label{
-    float: left;
-    width: 25%;
-    text-align: right;
-    margin-right: 30px;
-    margin-top: 5px;
+    display: block;
+    width: 100%;
+    margin: 0px auto;
+    text-align: left;
     font-weight: bold;
-
-    @media (max-width: 600px) {
-      text-align: center;
-      float: none;
-      width: 100%;
-      margin: 0px auto;
-    }
+    padding: 5px calc(5% - 10px);
   }
 
   input, textarea {
-    float: left;
-    width: 50%;
-    font-size: 20px;
-    border-radius: $border-radius;
-    padding: 5px;
-    margin: 0px;
+    display: block;
+    width: 90%;
+    font-size: $small-font;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 0px auto;
     outline: none;
-    border: 2px solid $dark-secondary-color;
+    border: 1px solid $dark-secondary-color;
+    background-color: $background-color;
 
     &:hover, &:focus {
-      border: 3px solid $dark-secondary-color;
-      margin: -1px;
-    }
-
-    @media (max-width: 600px) {
-      float: none;
-      width: 90%;
+      border: 2px solid $dark-secondary-color;
+      margin: -1px auto;
     }
   }
 
