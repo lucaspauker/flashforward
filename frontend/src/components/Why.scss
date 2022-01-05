@@ -62,8 +62,8 @@
         }
 
         #list {
-          width: 75%;
-          max-width: 800px;
+          width: 80%;
+          max-width: 960px;
           @media (max-width: 940px) {
             width: 100%;
             max-width: 100%;
@@ -72,8 +72,8 @@
         }
 
         #img {
-          width: 25%;
-          max-width: 400px;
+          width: 20%;
+          max-width: 240px;
           text-align: center;
           @media (max-width: 940px) {
             width: 100%;
