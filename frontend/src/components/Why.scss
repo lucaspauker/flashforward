@@ -2,7 +2,7 @@
 
 .why {
   max-width: $max-width;
-  padding: 0px 20px;
+  padding: 0px $lr-padding;
   margin: $elem-spacing auto;
 
   h2 {

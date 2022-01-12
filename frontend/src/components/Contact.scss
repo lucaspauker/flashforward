@@ -6,8 +6,9 @@
   color: $primary-text-color;
   font-size: $small-font;
   background-color: $primary-color;
-  padding: 30px 0px;
+  padding: 30px $lr-padding;
   margin: $elem-spacing auto;
+  margin-bottom: 0px;
 
   h3 {
     font-size: $medium-large-font;
@@ -43,6 +44,7 @@
     outline: none;
     border: 1px solid $dark-secondary-color;
     background-color: $background-color;
+    font-family: 'Lato', sans-serif;
 
     &:hover, &:focus {
       border: 2px solid $dark-secondary-color;
