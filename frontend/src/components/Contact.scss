@@ -1,71 +1,8 @@
 @import './variables.scss';
 
-.contact {
-  text-align: center;
-  color: $background-color;
-  color: $primary-text-color;
-  font-size: $small-font;
-  background-color: $primary-color;
-  padding: 30px $lr-padding;
-  margin: $elem-spacing auto;
-  margin-bottom: 0px;
-
-  h3 {
-    font-size: $medium-large-font;
-    margin: 0px;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-
-  .form-group {
-    text-align: center;
-    display: block;
-    width: 60%;
-    margin: 0px auto;
-    padding: 10px 0px;
-  }
-
-  label{
-    display: block;
-    width: 100%;
-    margin: 0px auto;
-    text-align: left;
-    font-weight: bold;
-    padding: 5px calc(5% - 10px);
-  }
-
-  input, textarea {
-    display: block;
-    width: 90%;
-    font-size: $small-font;
-    border-radius: 4px;
-    padding: 10px;
-    margin: 0px auto;
-    outline: none;
-    border: 1px solid $dark-secondary-color;
-    background-color: $background-color;
-    font-family: 'Lato', sans-serif;
-
-    &:hover, &:focus {
-      border: 2px solid $dark-secondary-color;
-      margin: -1px auto;
-    }
-  }
-
-  input {
-    height: 30px;
-  }
-
-  textarea {
-    height: 150px;
-    resize: none;
-  }
-
-  button {
-    color: $primary-text-color;
-    background-color: $background-color;
-    margin-top: 10px;
-    margin-bottom: 0px;
+#contact {
+  svg {
+    width: 22px;
+    height: 22px;
   }
 }
-

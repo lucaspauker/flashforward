@@ -1,27 +1,30 @@
-//import { Component } from 'react';
 import React, { Component } from "react";
 import { render } from "react-dom";
 import './App.scss';
 
-import { Navbar } from './Navbar';
-import { Intro } from './Intro';
+import { Header } from './Header';
+import { Hero } from './Hero';
 import { Benefits } from './Benefits';
 import { Why } from './Why';
-import { About } from './About';
+import { Team } from './Team';
 import { Contact } from './Contact';
+
+import { FaArrowUp } from 'react-icons/fa'
 
 class App extends Component {
   render() {
     return (
-      <div className='background'>
-        <div className='main'>
-          <Navbar/>
-          <Intro/>
-          <Benefits/>
-          <Why/>
-          <About/>
-          <Contact/>
+      <div className='main'>
+        <div id="scrollUp" title="Scroll To Top">
+          <FaArrowUp />
         </div>
+
+        <Header/>
+        <Hero/>
+        <Benefits/>
+        <Why/>
+        <Team/>
+        <Contact/>
       </div>
     );
   }

@@ -1,129 +1,29 @@
 @import './variables.scss';
 
-.why {
-  max-width: $max-width;
-  padding: 0px $lr-padding;
-  margin: $elem-spacing auto;
-
-  h2 {
-    font-size: $medium-large-font;
-    max-width: 500px;
-    margin: 0px auto;
-    margin-bottom: 20px;
+#why {
+  svg {
+    width: 30px;
+    height: 30px;
+    color: $secondary-color;
   }
 
-  h3 {
-    font-size: $medium-font;
-    max-width: 500px;
-    padding: 0px;
-    margin: 0px;
+  .single-service {
+    text-align: left;
+    align-items: center;
   }
 
-  p {
-    color: $secondary-text-color;
-    font-size: $small-font;
+  .vertcenter {
+    display: inline;
   }
 
-  .why-list {
-    margin: 0px;
-    padding: 0px;
+  .service-thumb {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 
-    ol {
-      margin: 0px;
-      padding: 0px;
-      vertical-align: top;
-      width: 100%;
-
-      li {
-        display: block;
-        padding: 0px;
-        margin: 0px;
-        margin-bottom: 30px;
-      }
+    svg {
+      width: 50%;
+      height: 50%;
     }
   }
-
-  .why-body {
-      width: 100%;
-      text-align: left;
-
-      ul {
-        width: 100%;
-        list-style-type: none;
-        padding: 0px;
-        margin: 0px auto;
-
-        li {
-          vertical-align: middle;
-          display: inline-block;
-          padding: 0px;
-          margin: 0px;
-
-        }
-
-        #list {
-          width: 80%;
-          max-width: 960px;
-          @media (max-width: 940px) {
-            width: 100%;
-            max-width: 100%;
-            margin: 0px auto;
-          }
-        }
-
-        #img {
-          width: 20%;
-          max-width: 240px;
-          text-align: center;
-          @media (max-width: 940px) {
-            width: 100%;
-            max-width: 100%;
-          }
-        }
-      }
-
-      img {
-        display: relative;
-        width: 180px;
-        padding: 0px;
-        float: right;
-
-        @media (max-width: 940px) {
-          float: none;
-          margin: 0px auto;
-        }
-      }
-
-      ol {
-        list-style: none;
-        counter-reset: item;
-
-       li {
-         counter-increment: item;
-         margin-bottom: 5px;
-
-         &:before {
-           content: "0" counter(item);
-           background: $dark-secondary-color;
-           font-weight: bold;
-           color: white;
-           font-size: $medium-font;
-           display: inline-block;
-           border-radius: 100%;
-           text-align: center;
-           margin-right: 20px;
-           width: 50px;
-           height: 50px;
-           line-height: 50px;
-         }
-
-         .content {
-           display: inline-block;
-           vertical-align: middle;
-           width: calc(100% - 70px);
-         }
-       }
-      }
-  }
 }
-

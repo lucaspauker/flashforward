@@ -1,56 +1,9 @@
 @import './variables.scss';
 
-.benefits {
-  text-align: center;
-  max-width: $max-width;
-  padding: 0px $lr-padding;
-  margin: $elem-spacing auto;
-
-  h3 {
-    font-size: $medium-font;
-  }
-
-  p {
-    color: $secondary-text-color;
-    font-size: $small-font;
-  }
-
+#features {
   svg {
-    color: black;
-    $svg-size: 30px;
-    width: $svg-size;
-    height: $svg-size;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px auto;
-
-    li {
-      display: inline-block;
-      vertical-align: top;
-      width: 20%;
-      max-width: 300px;
-      padding: 20px;
-      padding-bottom: 0px;
-      margin: 0px 20px;
-      transition: transform $transition-time;
-      border-radius: $border-radius;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
-      @media (max-width: 800px) {
-        width: 100%;
-        max-width: 100%;
-        padding: 20px 20px;
-        margin: 30px auto;
-        box-sizing: border-box;
-      }
-
-      &:hover {
-        transform: scale($transform);
-      }
-    }
+    width: 30px;
+    height: 30px;
+    color: $secondary-color;
   }
 }
-

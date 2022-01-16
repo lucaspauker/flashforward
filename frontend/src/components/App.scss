@@ -1,9 +1,9 @@
 @import 'variables';
 
 body, .background {
-  background-color: $background-color;
   padding: 0px;
   margin: 0px;
+  box-sizing: content-box;
 }
 
 .main {
@@ -23,26 +23,26 @@ body, .background {
   margin: 0px auto;
 }
 
-a {
-  color: $primary-text-color;
-  text-decoration: none;
-
-  &:hover { color: $primary-color }
+.btn,
+.btn:active,
+.btn.sApp-btn:before,
+.bg-overlay::after,
+.benifits-item:after {
+  background: linear-gradient(-47deg, $secondary-color 0%, $primary-color 100%);
 }
 
-button {
-    color: $primary-text-color;
-    border: none;
-    background-color: $primary-color;
-    padding: 20px 30px;
-    margin: 0px;
-    margin-bottom: 30px;
-    font-size: $small-font;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: transform $transition-time;
+.contact-box button {
+  background: $secondary-color !important;
+}
 
-    &:hover {
-      transform: scale($transform);
-    }
+.section-heading > h2::after {
+  background-color: $secondary-color;
+}
+
+.contact-us .social-icon {
+  background-color: $secondary-color;
+}
+
+.team-overlay::after {
+  background-color: $secondary-color;
 }

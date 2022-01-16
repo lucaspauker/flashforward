@@ -1,95 +1,75 @@
-import React from 'react';
-import './Contact.scss';
+import React, { Component } from 'react';
+import ContactForm from './ContactForm';
 import axios from 'axios';
 
-import Collapsible from 'react-collapsible';
+import './Contact.scss'
+import { BsHouseDoor, BsMailbox } from 'react-icons/bs'
 
-export class Contact extends React.Component {
-  render() {
-    return (
-      <div className='contact' id='contact'>
-        <ContactForm/>
-      </div>
-    );
-  }
+const data = {
+    heading: "Contact Us",
+    headingText: "Send us a message about how we can help you!",
 }
 
-class ContactForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      email: '',
-      message: '',
-      isFilled: false,
+const iconList = [
+  {
+    icon: <BsHouseDoor/>,
+    text: "Stanford, CA",
+  },
+  {
+    icon: <BsMailbox/>,
+    text: "contact@flashforward.ai",
+  },
+]
+
+export class Contact extends Component {
+    state = {
+      data: {},
+      iconList: []
     }
-  }
-
-  onNameChange(event) {
-    this.setState({name: event.target.value})
-  }
-
-  onEmailChange(event) {
-    this.setState({email: event.target.value})
-  }
-
-  onMessageChange(event) {
-    this.setState({message: event.target.value})
-  }
-
-  resetForm(){
-    this.setState({name: '', email: '', message: '', isFilled: true})
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-
-    axios({
-      method: 'POST',
-      url:'api/contact/',
-      data:  {
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message,
-      }
-      }).then((response)=>{
-        if (response.data.status === 'success') {
-          this.resetForm()
-        } else if(response.data.status === 'fail') {
-        }
+    componentDidMount(){
+      this.setState({
+        data: data,
+        iconList: iconList,
       })
-  }
-
-  render () {
-    if (this.state.isFilled) {
-      return(
-        <h3>Thanks for filling out the form! We will be in touch soon.</h3>
+    }
+    render() {
+      return (
+        <section id="contact" className="contact-area bg-gray ptb_100">
+          <div className="container">
+            <div className="row justify-content-center">
+            <div className="col-12 col-md-10 col-lg-6">
+              {/* Section Heading */}
+              <div className="section-heading text-center">
+              <h2 className="text-capitalize">{this.state.data.heading}</h2>
+              <p className="d-none d-sm-block mt-4">{this.state.data.headingText}</p>
+              </div>
+            </div>
+            </div>
+            <div className="row justify-content-between">
+            <div className="col-12 col-md-5">
+              {/* Contact Us */}
+              <div className="contact-us">
+              <p className="mb-3">{this.state.data.content}</p>
+                <ul>
+                  {this.state.iconList.map((item, idx) => {
+                    return(
+                      <li key={`ci_${idx}`} className="py-2 media">
+                        <div className="social-icon mr-3">
+                          {item.icon}
+                        </div>
+                        <span className="media-body align-self-center">{item.text}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+            <div className="col-12 col-md-6 pt-4 pt-md-0">
+              <ContactForm />
+            </div>
+            </div>
+          </div>
+        </section>
       );
     }
-    else {
-      return(
-        <>
-          <h3>Contact us!</h3>
-          <form id='contact-form' onSubmit={this.handleSubmit.bind(this)} method='POST'>
-              <div className='form-group'>
-                  <label htmlFor='name'>Name *</label>
-                  <input type='text' className='form-control' id='name' value={this.state.name} onChange={this.onNameChange.bind(this)} placeholder='John Doe' />
-
-              </div>
-              <div className='form-group'>
-                  <label htmlFor='email'>Email address *</label>
-                  <input type='text' className='form-control' id='email' value={this.state.email} onChange={this.onEmailChange.bind(this)} placeholder='example@gmail.com' />
-              </div>
-              <div className='form-group'>
-                  <label htmlFor='message'>Message *</label>
-                  <textarea className='form-control' rows='5' id='message' value={this.state.message} onChange={this.onMessageChange.bind(this)} placeholder='Your questions or comments' />
-
-              </div>
-              <button type='submit' className='btn btn-primary'>Submit</button>
-          </form>
-        </>
-      );
-    }
-
-  }
 }

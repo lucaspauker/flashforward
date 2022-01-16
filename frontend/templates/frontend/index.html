@@ -9,9 +9,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Style css -->
+  <link rel="stylesheet" href="static/frontend/css/style.css">
+
+  <!-- Responsive css -->
+  <link rel="stylesheet" href="static/frontend/css/responsive.css">
 </head>
 <body>
-<div id="app"></div>
+  <div id="app"></div>
+
+  <!-- jQuery(necessary for all JavaScript plugins) -->
+  <script src="{% static "frontend/js/core.min.js" %}"></script>
+
+  <!-- Bootstrap js -->
+  <script src="{% static "frontend/js/popper.min.js" %}"></script>
+  <script src="{% static "frontend/js/bootstrap.min.js" %}"></script>
+
+  <!-- Plugins js -->
+  <script src="{% static "frontend/js/plugins.min.js" %}"></script>
+
+  <!-- Scripts js -->
+  <script src="{% static "frontend/js/scripts.js" %}"></script>
 </body>
 <script src="{% static "frontend/main.js" %}"></script>
 </html>
