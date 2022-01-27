@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from 'axios';
 
+import { BsCheckLg } from 'react-icons/bs'
+
 class ContactForm extends Component {
 
   constructor(props) {
@@ -11,7 +13,8 @@ class ContactForm extends Component {
   state = {
     name: '',
     email: '',
-    message: ''
+    message: '',
+    submitted: false,
   }
 
   changHandler = (event) => {
@@ -36,7 +39,8 @@ class ContactForm extends Component {
           this.setState({
             name: '',
             email: '',
-            message: ''
+            message: '',
+            submitted: true,
           })
         } else if(response.data.status === 'fail') {
         }
@@ -44,6 +48,16 @@ class ContactForm extends Component {
   }
 
   render() {
+    let icon;
+    let message;
+    if (this.state.submitted) {
+      icon = <BsCheckLg/>;
+      message = "Thanks!";
+    } else {
+      icon = <span><i className="fas fa-paper-plane" /></span>;
+      message = "Send Message";
+    }
+
     return (
       <div className="contact-box text-center">
         <form
@@ -91,8 +105,9 @@ class ContactForm extends Component {
             <div className="col-12">
               <button
                 type="submit"
-                className="btn btn-lg btn-block mt-3"><span className="text-white pr-3"><i className="fas fa-paper-plane" /></span>
-                Send Message
+                className="btn btn-lg btn-block mt-3">
+                  {icon}
+                  <p>{message}</p>
               </button>
             </div>
           </div>

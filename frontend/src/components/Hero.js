@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import './Hero.scss'
+import { BsCheckLg } from 'react-icons/bs'
+
 const initData = {
   heading: "Scheduling patches sucks.",
   content: "Use FlashForward to coordinate when patches happen, create custom patching policies, and optimize patch scheduling.",
@@ -8,9 +11,8 @@ const initData = {
   formHeading: "Join our email list",
   formText: "Fill all fields so we can get some info about you. We'll never send you spam!",
   formBtn: "We'll be in touch!",
-  formBtnText: "By signing up, you accept our",
-  formBtnText_2: "Terms",
-  formBtnText_3: "Privacy Policy"
+  formBtnSubmit: "Thanks!",
+  submitIcon: <BsCheckLg/>,
 }
 
 export class Hero extends Component {
@@ -19,6 +21,7 @@ export class Hero extends Component {
     data: {},
     name: '',
     email: '',
+    submitted: false,
   }
 
   componentDidMount(){
@@ -27,7 +30,7 @@ export class Hero extends Component {
     })
   }
 
-  changHandler = (event) => {
+  changeHandler = (event) => {
     this.setState({
       [event.target.name]: event.target.value
     })
@@ -35,6 +38,9 @@ export class Hero extends Component {
 
   submitHandler = (event) => {
     event.preventDefault();
+
+    const cpy = { ...this.state.data, formBtn: this.state.data.formBtnSubmit }
+    this.setState(() => ({ data: cpy }))
 
     axios({
       method: 'POST',
@@ -48,6 +54,7 @@ export class Hero extends Component {
           this.setState({
             name: '',
             email: '',
+            submitted: true,
           })
         } else if(response.data.status === 'fail') {
         }
@@ -55,6 +62,13 @@ export class Hero extends Component {
   }
 
   render() {
+    let icon;
+    if (this.state.submitted) {
+      icon = this.state.data.submitIcon;
+    } else {
+      icon = "";
+    }
+
     return (
       <section id="home" className="section welcome-area bg-overlay d-flex align-items-center">
         <div className="container">
@@ -82,14 +96,14 @@ export class Hero extends Component {
               <div className="row">
               <div className="col-12">
                 <div className="form-group">
-                <input type="text" className="form-control" name="name" placeholder="Name" required="required" onChange={this.changHandler} value={this.state.name} />
+                <input type="text" className="form-control" name="name" placeholder="Name" required="required" onChange={this.changeHandler} value={this.state.name} />
                 </div>
                 <div className="form-group">
-                <input type="email" className="form-control" name="email" placeholder="Email" required="required" onChange={this.changHandler} value={this.state.email} />
+                <input type="email" className="form-control" name="email" placeholder="Email" required="required" onChange={this.changeHandler} value={this.state.email} />
                 </div>
               </div>
               <div className="col-12">
-                <button className="btn btn-bordered w-100 mt-3 mt-sm-4" type="submit">{this.state.data.formBtn}</button>
+                <button className="btn btn-bordered w-100 mt-3 mt-sm-4" type="submit">{icon}<p>{this.state.data.formBtn}</p></button>
               </div>
               </div>
             </form>
